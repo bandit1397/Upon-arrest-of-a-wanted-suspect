@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>수배자 발견 시 현장조치 매뉴얼</title>
+<style>
+  body {
+    font-family: "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+    background: #f5f7fa;
+    color: #222;
+    padding: 1rem;
+  }
+  h1 {
+    text-align: center;
+    color: #003366;
+    margin-bottom: 1rem;
+  }
+  details {
+    background: #fff;
+    border: 1px solid #ccd;
+    border-radius: 12px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  }
+  summary {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #003366;
+    cursor: pointer;
+  }
+  summary::marker {
+    color: #003366;
+  }
+  ul {
+    margin-top: 0.5rem;
+    margin-left: 1.2rem;
+    line-height: 1.6;
+  }
+  .doc-list, .law-list, .sub-section {
+    background: #f0f6ff;
+    border-left: 4px solid #0078d4;
+    padding: 0.7rem;
+    margin-top: 0.7rem;
+    border-radius: 8px;
+    line-height: 1.6;
+  }
+  .sub-toggle details {
+    margin-top: 0.5rem;
+  }
+  .sub-toggle summary {
+    font-size: 1rem;
+    color: #004c99;
+  }
+</style>
+</head>
+<body>
+
+<h1>현장 수배자 발견 시 조치 매뉴얼</h1>
+
+<!-- ① 벌금수배자 -->
+<details>
+  <summary>① 벌금수배자 발견 시</summary>
+
+  <div class="sub-section"> <strong>벌금수배자는 두 종류</strong><br>
+    1) 형집행장 발부 O<br>
+    2) 형집행장 발부 X
+  </div>
+
+  <div class="sub-toggle">
+    <details>
+      <summary>①-1. 형집행장 <strong>미발부 벌금수배자</strong> (체포 불가)</summary>
+      <ul>
+        <li>경찰조회기에서 벌금수배자로 확인.</li>
+        <li><strong>형집행장이 없을 경우 체포 불가</strong>.</li>
+        <li>벌금 수배사실만 대상자에게 구두로 고지.</li>
+        <li>지명수배 처리처럼 별도 검거보고서 작성은 없음.</li>
+      </ul>
+      <div class="doc-list"><strong>필요 서류:</strong> 없음 (고지 후 종결)</div>
+    </details>
+
+    <details>
+      <summary>①-2. 형집행장 <strong>발부된 벌금수배자</strong> (체포 대상)</summary>
+      <ul>
+        <li>형집행장 발부 확인됨.</li>
+        <li>대상자에게 <strong>죄명, 벌금액수, 형집행장 발부 사실을 등 미란다 내용 고지</strong>.</li>
+        <li><strong>현장에서 체포</strong> 후 ‘벌금체포자 검거보고서’ 작성.</li>
+        <li>작성한 검거보고서를 검찰청 당직실로 <strong>웹팩스 송부</strong>.</li>
+        <li>검찰청으로부터 <strong>형집행장 사본 및 인치지휘서 수령</strong>.</li>
+        <li>수배자에게  <strong>형집행장 사본 신속히 제시(어떤 범죄로 벌금수배 사실, 액수, 형집행장 발부 사실 제고지)</strong>.</li>
+        <li>수배자를 경찰서 형사당직실에 인계.</li>
+      </ul>
+      <div class="doc-list">
+        <strong>필수 서류:</strong><br>
+        1. 지명수배자 검거보고서<br>
+        2. 확인서<br>
+        3. 신체확인서<br>
+        4. 체포·구속 통지서<br>
+        <strong>절차 관련 문서:</strong> 형집행장 사본, 인치지휘서
+      </div>
+      <div class="law-list"><strong>관련 법규:</strong> 형사소송법, 경찰관 직무집행법</div>
+    </details>
+  </div>
+</details>
+
+<!-- ② 지명통보자 -->
+<details>
+  <summary>② 지명통보자 발견 시</summary>
+  <ul>
+    <li>경찰조회기에서 지명통보자로 확인.</li>
+    <li>대상자에게 지명통보 사실을 고지.</li>
+    <li><strong>지명통보 경찰서로 통보 사실 사본 송부</strong>.</li>
+    <li>지명통보자는 <strong>체포하지 않음</strong>.</li>
+  </ul>
+  <div class="doc-list">📄 <strong>필요 서류:</strong> 지명통보 사실 통보서</div>
+</details>
+
+<!-- ③ 지명수배자 -->
+<details>
+  <summary>③ 지명수배자 발견 시</summary>
+  <ul>
+    <li>경찰조회기에서 <strong>체포영장 발부 여부 확인</strong>.</li>
+    <li>대상자에게 체포영장 발부 사실 고지.</li>
+    <li><strong>체포영장에 의한 체포</strong> 실시.</li>
+    <li>필수 서류 구비 후 경찰서 형사당직실에 인계.</li>
+  </ul>
+  <div class="doc-list">📄 <strong>필요 서류:</strong> 확인서, 체포통지서, 신체확인서</div>
+  <div class="law-list">📚 <strong>관련 법규:</strong> 형사소송법 제73조(영장집행)</div>
+</details>
+
+</body>
+</html>
