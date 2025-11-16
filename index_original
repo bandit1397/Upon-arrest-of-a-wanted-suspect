@@ -33,12 +33,7 @@
   summary::marker {
     color: #003366;
   }
-  ul {
-    margin-top: 0.5rem;
-    margin-left: 1.2rem;
-    line-height: 1.6;
-  }
-  .doc-list, .law-list, .sub-section {
+  .sub-section, .doc-list, .law-list {
     background: #f0f6ff;
     border-left: 4px solid #0078d4;
     padding: 0.7rem;
@@ -46,6 +41,11 @@
     border-radius: 8px;
     line-height: 1.6;
   }
+  .depth-1 { margin-left: 1.2rem; }
+  .depth-2 { margin-left: 2.4rem; }
+  .depth-3 { margin-left: 3.6rem; }
+  .depth-4 { margin-left: 4.8rem; }
+  .depth-5 { margin-left: 6rem; }
   .sub-toggle details {
     margin-top: 0.5rem;
   }
@@ -59,48 +59,47 @@
 
 <h1>현장 수배자 발견 시 조치 매뉴얼</h1>
 
-<!-- ① 벌금수배자 -->
+<!-- 1 벌금수배자 -->
 <details>
-  <summary>① 벌금수배자(B수배)</summary>
+  <summary>1. 벌금수배자(B수배)</summary>
 
-  <div class="sub-section"> 
+  <div class="sub-section depth-1"> 
     1) 벌금 미납 <br>
     2) 형 미집행자 등
   </div>
 
   <div class="sub-toggle">
-    
+
     <!-- ①-1 미발부 -->
     <details>
-      <summary>①-1. 형집행장 <strong>미발부 벌금수배자</strong> (체포 불가)</summary>
-      <ul>
-        <li>형집행장이 발부되어 있지 않은 벌금 수배자 발견.</li>
-        <li><strong>검거 불가</strong>.</li>
-        <li>벌금 수배사실만 고지.</li>
-        <li>검거보고서 작성 X.</li>
-      </ul>
-      <div class="doc-list"><strong>필요 서류:</strong> 없음 (고지 후 종결)</div>
+      <summary>가. 형집행장 <strong>미발부 벌금수배자</strong> (체포 불가)</summary>
 
-      <details class="law-list">
+      <div class="depth-1">형집행장이 발부되어 있지 않은 벌금 수배자 발견.</div>
+      <div class="depth-1"><strong>검거 불가</strong>.</div>
+      <div class="depth-1">벌금 수배사실만 고지.</div>
+      <div class="depth-1">검거보고서 작성 X.</div>
+
+      <div class="doc-list depth-1"><strong>필요 서류:</strong> 없음 (고지 후 종결)</div>
+
+      <details class="law-list depth-1">
         <summary><strong>유의사항</strong></summary>
-        (별도 유의사항 없음)
+        <div class="depth-1">(별도 유의사항 없음)</div>
       </details>
     </details>
 
     <!-- ①-2 발부 -->
     <details>
-      <summary>①-2. 형집행장 <strong>발부된 벌금수배자</strong> (체포 대상)</summary>
-      <ul>
-        <li>형집행장 발부 확인됨.</li>
-        <li>수배자에게 <strong>죄명, 벌금액수, 형집행장 발부 사실 등 미란다 내용 고지</strong>.</li>
-        <li><strong>현장에서 체포</strong> 후 ‘지명수배자 검거보고서’ 작성.</li>
-        <li>지명수배자 검거보고서를 검찰청 당직실로 <strong>웹팩스 송부</strong>.</li>
-        <li>검찰청으로부터 <strong>형집행장 사본 및 인치지휘서 수령</strong>.</li>
-        <li>수배자에게 형집행장 사본을 제시하면서 죄명, 벌금액수, 형집행장 발부 사실 재고지.</li>
-        <li>수배자를 경찰서 형사당직실에 인계.</li>
-      </ul>
-      
-      <div class="doc-list">
+      <summary>나. 형집행장 <strong>발부된 벌금수배자</strong> (체포 대상)</summary>
+
+      <div class="depth-1">형집행장 발부 확인됨.</div>
+      <div class="depth-1">수배자에게 <strong>죄명, 벌금액수, 형집행장 발부 사실 등 미란다 내용 고지</strong>.</div>
+      <div class="depth-1"><strong>현장에서 체포</strong> 후 ‘지명수배자 검거보고서’ 작성.</div>
+      <div class="depth-1">지명수배자 검거보고서를 검찰청 당직실로 <strong>웹팩스 송부</strong>.</div>
+      <div class="depth-1">검찰청으로부터 <strong>형집행장 사본 및 인치지휘서 수령</strong>.</div>
+      <div class="depth-1">수배자에게 형집행장 사본을 제시하면서 죄명, 벌금액수, 형집행장 발부 사실 재고지.</div>
+      <div class="depth-1">수배자를 경찰서 형사당직실에 인계.</div>
+
+      <div class="doc-list depth-1">
         <strong>필수 서류:</strong><br>
         1. 지명수배자 검거보고서<br>
         2. 확인서<br>
@@ -109,89 +108,92 @@
         <strong>절차 관련 문서:</strong> 형집행장 사본, 인치지휘서
       </div>
 
-      <details class="law-list">
+      <details class="law-list depth-1">
         <summary><strong>유의사항</strong></summary>
-        1. 필수 서류는 오프라인 서식 이용.<br>
-        2. 지명수배자 검거보고서는 온라인 조회상 수배조회-수배자 클릭 검거보고서 작성 가능.<br>
-        3. 검창철 웹팩스 번호, 지구대 웹팩스 번호.
+        <div class="depth-1">1. 필수 서류는 오프라인 서식 이용.</div>
+        <div class="depth-1">2. 지명수배자 검거보고서는 온라인 조회상 수배조회-수배자 클릭 검거보고서 작성 가능.</div>
+        <div class="depth-1">3. 검창철 웹팩스 번호, 지구대 웹팩스 번호.</div>
       </details>
     </details>
+
   </div>
 </details>
 
 <!-- ② 지명통보자 -->
 <details>
-  <summary>② 지명통보자(C통보)</summary>
-  
-  <div class="sub-section">
-    조사를 위해 소재 파악이 되지 않은 자
-    체포불가
+  <summary>2. 지명통보자(C통보)</summary>
+
+  <div class="sub-section depth-1">
+    조사를 위해 소재 파악이 되지 않은 자<br>
+    체포불가<br>
     임의동행 응할 시 사무실로 임의동행하여 발부
   </div>
 
   <div class="sub-toggle">
-    
-    <!-- ②-1 타기관 → 필수서류 + 유의사항 포함 -->
+
+    <!-- ②-1 경찰 지명통보자 -->
     <details>
-      <summary>②-1. 타기관 지명통보자 (폴리폰 등록 금지)</summary>
-      <ul>
-        <li>경찰조회기에서 지명통보자로 확인되더라도 <strong>타기관 지명통보자는 폴리폰 발부 금지</strong>.</li>
-        <li>해당 기관에서 별도 안내가 이루어지는 대상.</li>
-      </ul>
+      <summary>가. 경찰 지명통보자</summary>
 
-      <div class="doc-list"><strong>필요 서류:</strong> 없음 (기관 안내 원칙 따름)</div>
+      <div class="depth-2">- 지명통보자 발견.</div>
+      <div class="depth-2"><strong>- 지명통보 사실 통지서 배부</strong>.</div>
+      <div class="depth-2">- 폴리폰 발부 가능 (단, 1건만 발부 가능).</div>
+      <div class="depth-2">- 여러 건의 지명통보가 있다면:</div>
+      <div class="depth-3">① 지구대로 임의동행 → KICS 내 기소중지 사건 접수 → 건별 발부 가능.</div>
+      <div class="depth-3">② 차량 비치 양식 사용 → 현장에서 모든 건에 대해 건별 배부.</div>
 
-      <details class="law-list">
+      <div class="doc-list depth-1">
+        <strong>필수 서류:</strong><br>
+        지명통보 사실 통지서 <br>
+        지명통보자소재발견보고서 2부
+      </div>
+
+      <details class="law-list depth-1">
         <summary><strong>유의사항</strong></summary>
-        1. (공통 적용) 폴리폰/온라인 조회 후 지명통보 표시 확인 시 발견관서·일자 확인.<br>
-        2. 시스템 사정으로 “지명통보 사실 통지서 등록” 문구가 뜰 수 있으나 타기관 사건은 절대 발부 금지.<br>
-        3. 민원 방지를 위해 PDA에서 기존 발견관서·일자 기록 여부 반드시 확인.
+        <div class="depth-1">- 지명통보 사실 통지서 재발급 금지.</div>
+        <div class="depth-2">① 이전에 다른 경찰관에게 발견되어 통지서를 받은 적 있어도 폴리폰에 수배내역과 함께 "지명통보 사실 통지서를 등록하시겠습니까?"라는 메뉴가 팝업되어 다시 배부하는 경우가 생겨 민원의 소지 발생 — 실제 발부 여부 반드시 확인.</div>
+        <div class="depth-1">- 여러 건의 지명통보가 조회된 경우에는 각 건 별도로 기소중지 사건 접수하여 지명통보자 소재발견보고서, 지명통보 사실 통지서를 작성.</div>
+        <div class="depth-2">① 10건의 지명통보자의 경우 10건 각각 별도로 기소중지 사건 접수, 소재발견보고서와 지명통보사실통지서 10건 모두 작성.</div>
+        <div class="depth-2">② 지명통보 사실통지서는 대상자에게 10부 발부, 지명통보자 소재발견 보고서 20부(검거관서 10부, 수배관서 10부) 수사지원팀 인계.</div>
       </details>
     </details>
 
-    <!-- ②-2 경찰 지명통보자 → 필수서류 + 유의사항 -->
+    <!-- ②-2 타기관 지명통보자 -->
     <details>
-      <summary>②-2. 경찰 지명통보자</summary>
-      <ul>
-        <li>경찰조회기에서 지명통보자로 확인.</li>
-        <li><strong>지명통보 사실 고지</strong>.</li>
-        <li><strong>지명통보 사실 통지서 배부</strong>.</li>
-        <li>폴리폰 발부 가능 (단, 1건만 발부 가능).</li>
-        <li>여러 건의 지명통보가 있다면:
-          <ul>
-            <li>① 지구대로 임의동행 → KICS 내 기소중지 사건 접수 → 건별 발부 가능.</li>
-            <li>② 차량 비치 양식 사용 → 현장에서 모든 건에 대해 건별 배부.</li>
-          </ul>
-        </li>
-      </ul>
+      <summary>나. 타기관 지명통보자 (폴리폰 등록 금지)</summary>
 
-      <div class="doc-list"><strong>필수 서류:</strong> 지명통보 사실 통지서 (여러 건이면 건별 배부)</div>
+      <div class="depth-1">경찰조회기에서 지명통보자로 확인되더라도 <strong>타기관 지명통보자는 폴리폰 발부 금지</strong>.</div>
+      <div class="depth-1">해당 기관에서 별도 안내가 이루어지는 대상.</div>
 
-      <details class="law-list">
+      <div class="doc-list depth-1"><strong>필요 서류:</strong> 없음 (기관 안내 원칙 따름)</div>
+
+      <details class="law-list depth-1">
         <summary><strong>유의사항</strong></summary>
-        1. 폴리폰/온라인 조회 후 지명통보 표시 시 발견관서·일자 확인.<br>
-        2. 기존에 통지서를 받은 적 있어도 재등록 팝업이 뜰 수 있음 — 실제 발부 여부 반드시 확인.<br>
-        3. PDA에서 발견관서·일자 공란 여부 확인 — 공란이 아니면 재발부 금지(민원 가능).
+        <div class="depth-1">(공통 적용) 폴리폰/온라인 조회 후 지명통보 표시 확인 시 발견관서·일자 확인.</div>
+        <div class="depth-1">시스템 사정으로 “지명통보 사실 통지서 등록” 문구가 뜰 수 있으나 타기관 사건은 절대 발부 금지.</div>
+        <div class="depth-1">민원 방지를 위해 PDA에서 기존 발견관서·일자 기록 여부 반드시 확인.</div>
       </details>
     </details>
+
   </div>
 </details>
 
 <!-- ③ 지명수배자 -->
 <details>
   <summary>③ 지명수배자(A수배)</summary>
-  <div class="sub-section"> 
+
+  <div class="sub-section depth-1"> 
     영장(체포,구속)이 발부된 수배자
   </div>
 
-  <ul>
-    <li>경찰조회기에서 <strong>체포영장 발부 여부 확인</strong>.</li>
-    <li>대상자에게 체포영장 발부 사실 고지.</li>
-    <li><strong>체포영장에 의한 체포</strong> 실시.</li>
-    <li>필수 서류 구비 후 경찰서 형사당직실에 인계.</li>
-  </ul>
-  <div class="doc-list">📄 <strong>필요 서류:</strong> 확인서, 체포통지서, 신체확인서</div>
-  <div class="law-list">📚 <strong>관련 법규:</strong> 형사소송법 제73조(영장집행)</div>
+  <div class="depth-1">경찰조회기에서 <strong>체포영장 발부 여부 확인</strong>.</div>
+  <div class="depth-1">대상자에게 체포영장 발부 사실 고지.</div>
+  <div class="depth-1"><strong>체포영장에 의한 체포</strong> 실시.</div>
+  <div class="depth-1">필수 서류 구비 후 경찰서 형사당직실에 인계.</div>
+
+  <div class="doc-list depth-1">📄 <strong>필요 서류:</strong> 확인서, 체포통지서, 신체확인서</div>
+  <div class="law-list depth-1">📚 <strong>관련 법규:</strong> 형사소송법 제73조(영장집행)</div>
+
 </details>
 
 </body>
