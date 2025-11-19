@@ -33,7 +33,7 @@
   summary::marker {
     color: #003366;
   }
-  .sub-section, .doc-list, .law-list {
+  .sub-section, .procedure-list, .doc-list, .law-list {
     background: #f0f6ff;
     border-left: 4px solid #0078d4;
     padding: 0.7rem;
@@ -74,11 +74,17 @@
     <details>
       <summary>가. 형집행장 <strong>미발부 벌금수배자</strong></summary>
 
-      <div class="depth-2">- <strong>체포 불가</strong>.</div>
-      <div class="depth-2">- 벌금 수배사실만 고지</div>
-      <div class="depth-2">- 검거보고서 작성 X</div>
+      <details class="procedure-list depth-1">
+        <summary><strong>절차</strong></summary>
+        <div class="depth-1">- <strong>체포 불가</strong>.</div>
+        <div class="depth-1">- 벌금 수배사실만 고지</div>
+        <div class="depth-1">- 검거보고서 작성 X</div>
+      </details>
 
-      <div class="doc-list depth-1"><strong>필요 서류:</strong> 없음 (고지 후 종결)</div>
+      <details class="doc-list depth-1">
+        <summary><strong>필수 서류</strong></summary>
+        <div class="depth-1"><strong>필요 서류:</strong> 없음 (고지 후 종결)</div>
+      </details>
 
       <details class="law-list depth-1">
         <summary><strong>참고사항</strong></summary>
@@ -90,12 +96,15 @@
     <details>
       <summary>나. 형집행장 <strong>발부된 벌금수배자</strong></summary>
 
-      <div class="depth-2">- 수배자에게 <strong>죄명, 벌금액수, 형집행장 발부 사실 등 미란다 내용 고지</strong>.</div>
-      <div class="depth-2">- <strong>현장에서 체포</strong> 후 ‘지명수배자 검거보고서’ 작성</div>
-      <div class="depth-2">- 지명수배자 검거보고서를 검찰청 당직실로 <strong>웹팩스 송부</strong>.</div>
-      <div class="depth-2">- 검찰청으로부터 <strong>형집행장 사본 및 인치지휘서 수령</strong></div>
-      <div class="depth-2">- 수배자에게 형집행장 사본을 제시하면서 죄명, 벌금액수, 형집행장 발부 사실 재고지</div>
-      <div class="depth-2">- 수배자를 경찰서 형사당직실에 인계</div>
+      <details class="procedure-list depth-1">
+        <summary><strong>절차</strong></summary>
+        <div class="depth-1">- 수배자에게 <strong>죄명, 벌금액수, 형집행장 발부 사실 등 미란다 내용 고지</strong>.</div>
+        <div class="depth-1">- <strong>현장에서 체포</strong> 후 ‘지명수배자 검거보고서’ 작성</div>
+        <div class="depth-1">- 지명수배자 검거보고서를 검찰청 당직실로 <strong>웹팩스 송부</strong>.</div>
+        <div class="depth-1">- 검찰청으로부터 <strong>형집행장 사본 및 인치지휘서 수령</strong></div>
+        <div class="depth-1">- 수배자에게 형집행장 사본을 제시하면서 죄명, 벌금액수, 형집행장 발부 사실 재고지</div>
+        <div class="depth-1">- 수배자를 경찰서 형사당직실에 인계</div>
+      </details>
 
       <details class="doc-list depth-1">
         <summary><strong>필수 서류</strong></summary>
