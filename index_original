@@ -142,15 +142,19 @@
     <!-- ②-1 경찰 지명통보자 -->
     <details>
       <summary>가. 경찰 지명통보자</summary>
-      <div class="depth-2"><strong>• 지명통보 사실 통지서 배부</strong></div>
-      <div class="depth-3">- PDA 발부</div>
-      <div class="depth-3">- Kics>지역경찰사건>기소중지사건접수>검색>접수>서식>"지명통보 사실 통지서"</div>
-      <div class="depth-3">- Off 라인 "지명통보 사실 통지서" 서식</div>
-      <div class="depth-2"><strong>• 지명통보자소재발견보고서 작성</strong>.</div>
-      <div class="depth-3">- PDA 지명통보 사실 통지서 등록 지명통보 사실 통지서 발부한 경우</div>
-      <div class="depth-4">- Kics 내 PDA 지명통보사건>검색>접수>서식>지명통보자 소재발견 보고서 2부 작성>인계 발송</div>
-      <div class="depth-3">- Kics 직접 등록 시</div>
-      <div class="depth-4">- Kics>지역경찰 사건>기소중지사건접수>관서명 및 사건번호 입력>검색>서식 작성(지명통보자 소재발견 보고서 2부, 지명통보 사실 통지서 1부)>인계 발송</div>
+
+      <details class="procedure-list depth-1">
+        <summary><strong>절차</strong></summary>
+        <div class="depth-1"><strong>• 지명통보 사실 통지서 배부</strong></div>
+        <div class="depth-2">- PDA 발부</div>
+        <div class="depth-2">- Kics>지역경찰사건>기소중지사건접수>검색>접수>서식>"지명통보 사실 통지서"</div>
+        <div class="depth-2">- Off 라인 "지명통보 사실 통지서" 서식</div>
+        <div class="depth-1"><strong>• 지명통보자소재발견보고서 작성</strong>.</div>
+        <div class="depth-2">- PDA 지명통보 사실 통지서 등록 지명통보 사실 통지서 발부한 경우</div>
+        <div class="depth-3">- Kics 내 PDA 지명통보사건>검색>접수>서식>지명통보자 소재발견 보고서 2부 작성>인계 발송</div>
+        <div class="depth-2">- Kics 직접 등록 시</div>
+        <div class="depth-3">- Kics>지역경찰 사건>기소중지사건접수>관서명 및 사건번호 입력>검색>서식 작성(지명통보자 소재발견 보고서 2부, 지명통보 사실 통지서 1부)>인계 발송</div>
+      </details>
 
       <details class="doc-list depth-1">
         <summary><strong>필수 서류</strong></summary>
@@ -172,13 +176,16 @@
     <!-- ②-2 타기관 지명통보자 -->
     <details>
       <summary>나. 타기관 지명통보자</summary>
-      
-      <div class="depth-2"><strong>• 지명통보 사실 통지서 배부</strong>.</div>
-      <div class="depth-3">- Off 라인 "지명통보 사실 통지서"</div>
-      <div class="depth-3">- 경찰조회기에서 지명통보자로 확인되더라도 <strong>타기관 지명통보자는 폴리폰으로 "지명통보 사실 통지서" 등록 발부 금지</strong>.</div>
-      <div class="depth-2"><strong>• 지명통보자소재발견보고서 작성</strong>.</div>
-      <div class="depth-3">- Off 라인 "지명통보자 소재발견 보고서 2부"</div>
 
+      <details class="procedure-list depth-1">
+        <summary><strong>절차</strong></summary>
+        <div class="depth-1"><strong>• 지명통보 사실 통지서 배부</strong>.</div>
+        <div class="depth-2">- Off 라인 "지명통보 사실 통지서"</div>
+        <div class="depth-2">- 경찰조회기에서 지명통보자로 확인되더라도 <strong>타기관 지명통보자는 폴리폰으로 "지명통보 사실 통지서" 등록 발부 금지</strong>.</div>
+        <div class="depth-1"><strong>• 지명통보자소재발견보고서 작성</strong>.</div>
+        <div class="depth-2">- Off 라인 "지명통보자 소재발견 보고서 2부"</div>
+      </details>
+       
       <details class="doc-list depth-1">
         <summary><strong>필수 서류</strong></summary>
         <div class="depth-1">타기관 지명통보자 와 동일</div>
@@ -207,13 +214,16 @@
     <!-- ①-1 경찰 A수배 -->
     <details>
       <summary>가. 경찰 A수배</summary>
-      
-      <div class="depth-2">- 수배자에게 <strong>죄명, 구속영장 발부 사실 등 미란다원칙 고지 후 체포</strong>.</div>
-      <div class="depth-2">- 수배관서의 사건담당(사건 담당자)<strong>에 전화 체포시간 통지</strong>.</div>
-      <div class="depth-2">- 체포(구속)영장<strong>전송받아 수배자에게 신속히 제시</strong>.</div>
-      <div class="depth-2">- 지명수배자 검거보고서 등 체포관련 서류와 함께 신병 인계</div>
-      <div class="depth-3">- 지역경찰사건>기소중지사건접수>관서선택·사건번호 입력>검색>(검색 후 사건목록)접수>서식은 지명수배자 검거보고서(기안전결 및 기안올림) 1부, 확인서(편철)1부, 체포·구속 피의자 신체확인서(편철)1부, 체포·구속 통지서(사법경찰관 명의) 1부 작성>지역경찰 사건목록에서 인계발송</div>
 
+      <details class="procedure-list depth-1">
+        <summary><strong>절차</strong></summary>
+        <div class="depth-1">- 수배자에게 <strong>죄명, 구속영장 발부 사실 등 미란다원칙 고지 후 체포</strong>.</div>
+        <div class="depth-1">- 수배관서의 사건담당(사건 담당자)<strong>에 전화 체포시간 통지</strong>.</div>
+        <div class="depth-1">- 체포(구속)영장<strong>전송받아 수배자에게 신속히 제시</strong>.</div>
+        <div class="depth-1">- 지명수배자 검거보고서 등 체포관련 서류와 함께 신병 인계</div>
+        <div class="depth-2">- 지역경찰사건>기소중지사건접수>관서선택·사건번호 입력>검색>(검색 후 사건목록)접수>서식은 지명수배자 검거보고서(기안전결 및 기안올림) 1부, 확인서(편철)1부, 체포·구속 피의자 신체확인서(편철)1부, 체포·구속 통지서(사법경찰관 명의) 1부 작성>지역경찰 사건목록에서 인계발송</div>
+      </details>
+      
       <details class="doc-list depth-1">
         <summary><strong>필수 서류</strong></summary>
         <div class="depth-1">1. 지명수배자 검거보고서</div>
@@ -246,11 +256,14 @@
     <details>
       <summary>나. 타기관 A수배</summary>
 
-      <div class="depth-2">- 수배자에게 <strong>죄명, 구속영장 발부 사실 등 미란다원칙 고지 후 체포</strong>.</div>
-      <div class="depth-2">- 수배관서의 사건담당(사건 담당자)<strong>에 전화 체포시간 통지</strong>.</div>
-      <div class="depth-2">- 체포(구속)영장<strong>전송받아 수배자에게 신속히 제시</strong>.</div>
-      <div class="depth-2">- Off 라인 체포관련 서류와 함께 신병 인계</div>
-   
+      <details class="procedure-list depth-1">
+        <summary><strong>절차</strong></summary>
+        <div class="depth-1">- 수배자에게 <strong>죄명, 구속영장 발부 사실 등 미란다원칙 고지 후 체포</strong>.</div>
+        <div class="depth-1">- 수배관서의 사건담당(사건 담당자)<strong>에 전화 체포시간 통지</strong>.</div>
+        <div class="depth-1">- 체포(구속)영장<strong>전송받아 수배자에게 신속히 제시</strong>.</div>
+        <div class="depth-1">- Off 라인 체포관련 서류와 함께 신병 인계</div>
+      </details>
+  
       <details class="doc-list depth-1">
         <summary><strong>필수 서류</strong></summary>
         <div class="depth-1">경찰 A수배 와 동일</div>
