@@ -439,10 +439,9 @@
       logoScreen.style.display = 'none';
       manualScreen.style.display = 'block';
 
-      // 브라우저 렌더링이 끝난 후 트랜지션 시작
-      requestAnimationFrame(() => {
+      setTimeout(() => {
         manualScreen.classList.add('manual-zoom-in');
-      });
+      }, 50); // 10 → 50ms 정도로 늘리면 트랜지션이 동작
     }, 2000);
   });
 </script>
