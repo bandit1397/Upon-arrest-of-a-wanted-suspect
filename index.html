@@ -87,6 +87,7 @@
   .depth-3 { margin-left: 3.6rem; }
   .depth-4 { margin-left: 4.8rem; }
   .depth-5 { margin-left: 6rem; }
+  
   .sub-toggle details {
     margin-top: 0.5rem;
   }
@@ -94,6 +95,28 @@
     font-size: 1rem;
     color: #004c99;
   }
+
+/* --- Hanging indent 적용 --- */
+  .sub-section div,
+  .procedure-list div,
+  .doc-list div,
+  .law-list div {
+    position: relative;
+    padding-left: 1.2rem;  /* - 표시 공간 확보 */
+    text-indent: -1.2rem;  /* 첫 줄 마이너스 들여쓰기 */
+  }
+
+  /* br 후 줄바꿈 들여쓰기 */
+  .sub-section div br,
+  .procedure-list div br,
+  .doc-list div br,
+  .law-list div br {
+    display: block;
+    margin-left: 1.2rem; /* 줄바꿈 후 들여쓰기 */
+  }
+
+
+  
 </style>
 </head>
   
