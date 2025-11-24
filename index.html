@@ -27,18 +27,30 @@
     max-width: 90%;
     max-height: 90%;
     cursor: pointer;
-    transition: transform 0.3s ease;
+    transition: transform 2s ease, opacity 2s ease;
   }
 
-  #logo-screen img:hover {
-    transform: scale(1.05);
+  /* 로고 사라질 때 애니메이션 */
+  .logo-zoom-out {
+    transform: scale(1.5); /* 확대 */
+    opacity: 0;             /* 사라짐 */
   }
 
-  /* 매뉴얼 화면 숨김 */
+  /* 매뉴얼 화면 숨김 + 초기 상태는 축소 */
   #manual-screen {
     display: none;
     padding: 1rem;
+    transform: scale(0.8);
+    opacity: 0;
+    transition: transform 1s ease, opacity 1s ease;
   }
+
+  /* 매뉴얼 나타날 때 */
+  .manual-zoom-in {
+    transform: scale(1);
+    opacity: 1;
+  }
+  
   h1 {
     text-align: center;
     color: #003366;
@@ -416,17 +428,26 @@
 </div>
 
 <script>
-  // 로고 클릭 시 매뉴얼 화면으로 전환
   const logoImg = document.getElementById('logo-img');
   const logoScreen = document.getElementById('logo-screen');
   const manualScreen = document.getElementById('manual-screen');
 
   logoImg.addEventListener('click', () => {
-    logoScreen.style.display = 'none';
-    manualScreen.style.display = 'block';
+    // 1) 로고 확대 + 페이드아웃
+    logoImg.classList.add('logo-zoom-out');
+
+    // 2초 후 로고 화면 숨기고 매뉴얼 화면 등장
+    setTimeout(() => {
+      logoScreen.style.display = 'none';
+      manualScreen.style.display = 'block';
+
+      // 다음 프레임에서 매뉴얼 줌인 적용
+      setTimeout(() => {
+        manualScreen.classList.add('manual-zoom-in');
+      }, 10);
+    }, 2000); // 로고 애니메이션 시간과 동일
   });
 </script>
-
 
 </body>
 </html>
