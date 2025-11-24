@@ -37,19 +37,20 @@
   }
 
   /* 매뉴얼 화면 숨김 + 초기 상태는 축소 */
-  #manual-screen {
-    display: none;
-    padding: 1rem;
-    transform: scale(0.8);
-    opacity: 0;
-    transition: transform 1s ease, opacity 1s ease;
-  }
+ #manual-screen {
+  /* display:none 제거 */
+  padding: 1rem;
+  transform: scale(0.8);
+  opacity: 0;
+  transition: transform 1s ease, opacity 1s ease;
+  pointer-events: none; /* 숨겨져 있을 때 클릭 막기 */
+}
 
-  /* 매뉴얼 나타날 때 */
-  .manual-zoom-in {
-    transform: scale(1);
-    opacity: 1;
-  }
+#manual-screen.show {
+  transform: scale(1);
+  opacity: 1;
+  pointer-events: auto;
+}
   
   h1 {
     text-align: center;
@@ -437,11 +438,9 @@
 
     setTimeout(() => {
       logoScreen.style.display = 'none';
-      manualScreen.style.display = 'block';
-
-      setTimeout(() => {
-        manualScreen.classList.add('manual-zoom-in');
-      }, 50); // 10 → 50ms 정도로 늘리면 트랜지션이 동작
+    
+      // display는 항상 block, 클래스로 등장 효과 적용
+      manualScreen.classList.add('show');
     }, 2000);
   });
 </script>
