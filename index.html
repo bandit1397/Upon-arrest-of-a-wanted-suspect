@@ -45,8 +45,15 @@
   /* 매뉴얼 화면 */
   #manual-screen {
     display: none;
+    opacity: 0;
     padding: 1rem;
-  }
+    transition: opacity 1s ease; /* 페이드인 효과 */
+}
+
+/* 페이드인 클래스 */
+.fade-in {
+    opacity: 1;
+}
 
   h1 {
     text-align: center;
@@ -431,16 +438,23 @@
   const manualScreen = document.getElementById("manual-screen");
 
   logoImg.addEventListener("click", () => {
-    // 1) 로고 화면을 서서히 사라지게
+    // 1) 로고 화면 서서히 사라짐
     logoScreen.classList.add("fade-out");
 
-    // 2) 애니메이션이 끝난 후 콘텐츠 표시 (1초 후)
+    // 2) 1초 후 로고 숨기고 매뉴얼 표시 + 페이드인
     setTimeout(() => {
       logoScreen.style.display = "none";
+
+      // 매뉴얼 표시
       manualScreen.style.display = "block";
+
+      // 다음 프레임에서 페이드인 적용 (부드럽게 나타나게)
+      setTimeout(() => {
+        manualScreen.classList.add("fade-in");
+      }, 10);
+
     }, 1000); // fade-out 과 동일한 시간
   });
 </script>
-
 </body>
 </html>
