@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>수배자 매뉴얼</title>
+
 <style>
   html, body {
     margin: 0;
@@ -14,13 +15,20 @@
     color: #222;
   }
 
-  /* 로고 화면 스타일 */
+  /* 로고 화면 */
   #logo-screen {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
     background: #000;
+    opacity: 1;
+    transition: opacity 1s ease;   /* 페이드 효과 추가 */
+  }
+
+  /* 페이드아웃 클래스 */
+  .fade-out {
+    opacity: 0;
   }
 
   #logo-screen img {
@@ -34,16 +42,19 @@
     transform: scale(1.05);
   }
 
-  /* 매뉴얼 화면 숨김 */
+  /* 매뉴얼 화면 */
   #manual-screen {
     display: none;
     padding: 1rem;
   }
+
   h1 {
     text-align: center;
     color: #003366;
     margin-bottom: 1rem;
   }
+
+  /* details 스타일 */
   details {
     background: #fff;
     border: 1px solid #ccd;
@@ -61,6 +72,7 @@
   summary::marker {
     color: #003366;
   }
+
   .sub-section, .procedure-list, .doc-list, .law-list {
     background: #f0f6ff;
     border-left: 4px solid #0078d4;
@@ -69,18 +81,16 @@
     border-radius: 8px;
     line-height: 1.6;
   }
+
   .depth-1 { margin-left: 1.2rem; }
   .depth-2 { margin-left: 2.4rem; }
   .depth-3 { margin-left: 3.6rem; }
   .depth-4 { margin-left: 4.8rem; }
   .depth-5 { margin-left: 6rem; }
-  .sub-toggle details {
-    margin-top: 0.5rem;
-  }
-  .sub-toggle summary {
-    font-size: 1rem;
-    color: #004c99;
-  }
+
+  .sub-toggle details { margin-top: 0.5rem; }
+  .sub-toggle summary { font-size: 1rem; color: #004c99; }
+
 </style>
 </head>
   
@@ -416,17 +426,24 @@
 </div>
 
 <script>
-  // 로고 클릭 시 매뉴얼 화면으로 전환
-  const logoImg = document.getElementById('logo-img');
-  const logoScreen = document.getElementById('logo-screen');
-  const manualScreen = document.getElementById('manual-screen');
+  // 자동 페이드 후 매뉴얼로 전환
+  window.addEventListener("load", function () {
+    const logo = document.getElementById("logo-screen");
+    const manual = document.getElementById("manual-screen");
 
-  logoImg.addEventListener('click', () => {
-    logoScreen.style.display = 'none';
-    manualScreen.style.display = 'block';
+    // 1. 1.5초 후 페이드 시작
+    setTimeout(() => {
+      logo.classList.add("fade-out");
+
+      // 2. 페이드 1초 후 완전히 교체
+      setTimeout(() => {
+        logo.style.display = "none";
+        manual.style.display = "block";
+      }, 1000);
+
+    }, 1500);
   });
 </script>
-
 
 </body>
 </html>
