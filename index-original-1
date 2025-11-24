@@ -27,18 +27,31 @@
     max-width: 90%;
     max-height: 90%;
     cursor: pointer;
-    transition: transform 0.3s ease;
+    transition: transform 2s ease, opacity 2s ease;
   }
 
-  #logo-screen img:hover {
-    transform: scale(1.05);
+  /* 로고 사라질 때 애니메이션 */
+  .logo-zoom-out {
+    transform: scale(1.5); /* 확대 */
+    opacity: 0;             /* 사라짐 */
   }
 
-  /* 매뉴얼 화면 숨김 */
-  #manual-screen {
-    display: none;
-    padding: 1rem;
-  }
+  /* 매뉴얼 화면 숨김 + 초기 상태는 축소 */
+ #manual-screen {
+  /* display:none 제거 */
+  padding: 1rem;
+  transform: scale(0.8);
+  opacity: 0;
+  transition: transform 1s ease, opacity 1s ease;
+  pointer-events: none; /* 숨겨져 있을 때 클릭 막기 */
+}
+
+#manual-screen.show {
+  transform: scale(1);
+  opacity: 1;
+  pointer-events: auto;
+}
+  
   h1 {
     text-align: center;
     color: #003366;
@@ -416,17 +429,21 @@
 </div>
 
 <script>
-  // 로고 클릭 시 매뉴얼 화면으로 전환
   const logoImg = document.getElementById('logo-img');
   const logoScreen = document.getElementById('logo-screen');
   const manualScreen = document.getElementById('manual-screen');
 
   logoImg.addEventListener('click', () => {
-    logoScreen.style.display = 'none';
-    manualScreen.style.display = 'block';
+    logoImg.classList.add('logo-zoom-out');
+
+    setTimeout(() => {
+      logoScreen.style.display = 'none';
+    
+      // display는 항상 block, 클래스로 등장 효과 적용
+      manualScreen.classList.add('show');
+    }, 2000);
   });
 </script>
-
 
 </body>
 </html>
