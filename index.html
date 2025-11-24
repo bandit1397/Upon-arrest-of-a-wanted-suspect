@@ -37,26 +37,26 @@
   }
 
   /* 매뉴얼 화면 숨김 + 초기 상태는 축소 */
- #manual-screen {
-  /* display:none 제거 */
-  padding: 1rem;
-  transform: scale(0.8);
-  opacity: 0;
-  transition: transform 1s ease, opacity 1s ease;
-  pointer-events: none; /* 숨겨져 있을 때 클릭 막기 */
-}
+  #manual-screen {
+    padding: 1rem;
+    transform: scale(0.8);
+    opacity: 0;
+    transition: transform 1s ease, opacity 1s ease;
+    pointer-events: none;
+  }
 
-#manual-screen.show {
-  transform: scale(1);
-  opacity: 1;
-  pointer-events: auto;
-}
-  
+  #manual-screen.show {
+    transform: scale(1);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
   h1 {
     text-align: center;
     color: #003366;
     margin-bottom: 1rem;
   }
+
   details {
     background: #fff;
     border: 1px solid #ccd;
@@ -65,15 +65,18 @@
     margin-bottom: 1rem;
     box-shadow: 0 1px 3px rgba(0,0,0,0.08);
   }
+
   summary {
     font-size: 1.15rem;
     font-weight: 700;
     color: #003366;
     cursor: pointer;
   }
+
   summary::marker {
     color: #003366;
   }
+
   .sub-section, .procedure-list, .doc-list, .law-list {
     background: #f0f6ff;
     border-left: 4px solid #0078d4;
@@ -82,41 +85,31 @@
     border-radius: 8px;
     line-height: 1.6;
   }
-  .depth-1 { margin-left: 1.2rem; }
-  .depth-2 { margin-left: 2.4rem; }
-  .depth-3 { margin-left: 3.6rem; }
-  .depth-4 { margin-left: 4.8rem; }
-  .depth-5 { margin-left: 6rem; }
-  
-  .sub-toggle details {
-    margin-top: 0.5rem;
-  }
-  .sub-toggle summary {
-    font-size: 1rem;
-    color: #004c99;
-  }
 
-/* --- Hanging indent 적용 --- */
+  /* depth별 margin 제거하고 padding으로 대체 */
+  .depth-1 { padding-left: 1.8rem; } /* depth1~depth2 중간 */
+  .depth-2 { padding-left: 3.0rem; } /* depth2~depth3 중간 */
+  .depth-3 { padding-left: 4.2rem; } /* depth3~depth4 중간 */
+  .depth-4 { padding-left: 5.4rem; } /* depth4~depth5 중간 */
+  .depth-5 { padding-left: 6.6rem; } /* depth5~depth6 중간 */
+
+  /* hanging indent 적용 */
   .sub-section div,
   .procedure-list div,
   .doc-list div,
   .law-list div {
     position: relative;
-    padding-left: 1.2rem;  /* - 표시 공간 확보 */
-    text-indent: -1.2rem;  /* 첫 줄 마이너스 들여쓰기 */
+    text-indent: -1.2rem; /* 첫 줄 '-' 위치 고정 */
   }
 
-  /* br 후 줄바꿈 들여쓰기 */
-  .sub-section div br,
-  .procedure-list div br,
-  .doc-list div br,
-  .law-list div br {
-    display: block;
-    margin-left: 1.2rem; /* 줄바꿈 후 들여쓰기 */
+  .sub-toggle details {
+    margin-top: 0.5rem;
   }
 
-
-  
+  .sub-toggle summary {
+    font-size: 1rem;
+    color: #004c99;
+  }
 </style>
 </head>
   
@@ -458,11 +451,8 @@
 
   logoImg.addEventListener('click', () => {
     logoImg.classList.add('logo-zoom-out');
-
     setTimeout(() => {
       logoScreen.style.display = 'none';
-    
-      // display는 항상 block, 클래스로 등장 효과 적용
       manualScreen.classList.add('show');
     }, 2000);
   });
