@@ -5,10 +5,38 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>수배자 매뉴얼</title>
 <style>
-  body {
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
     font-family: "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
     background: #f5f7fa;
     color: #222;
+  }
+
+  /* 로고 화면 스타일 */
+  #logo-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background: #000;
+  }
+
+  #logo-screen img {
+    max-width: 90%;
+    max-height: 90%;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+
+  #logo-screen img:hover {
+    transform: scale(1.05);
+  }
+
+  /* 매뉴얼 화면 숨김 */
+  #manual-screen {
+    display: none;
     padding: 1rem;
   }
   h1 {
@@ -55,8 +83,15 @@
   }
 </style>
 </head>
+  
 <body>
+  
+<!-- 로고 화면 -->
+<div id="logo-screen">
+  <img src="logo.png" alt="수배자 매뉴얼 로고" id="logo-img">
+</div>
 
+<div id="manual-screen">
 <h1>수배자 매뉴얼</h1>
 
 <!-- 1 벌금수배자 -->
@@ -377,6 +412,20 @@
     오류 & 추가 의견 남기기
   </a>
 </div>
+
+</div>
+
+<script>
+  // 로고 클릭 시 매뉴얼 화면으로 전환
+  const logoImg = document.getElementById('logo-img');
+  const logoScreen = document.getElementById('logo-screen');
+  const manualScreen = document.getElementById('manual-screen');
+
+  logoImg.addEventListener('click', () => {
+    logoScreen.style.display = 'none';
+    manualScreen.style.display = 'block';
+  });
+</script>
 
 
 </body>
