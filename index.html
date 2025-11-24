@@ -426,22 +426,19 @@
 </div>
 
 <script>
-  // 자동 페이드 후 매뉴얼로 전환
-  window.addEventListener("load", function () {
-    const logo = document.getElementById("logo-screen");
-    const manual = document.getElementById("manual-screen");
+  const logoScreen = document.getElementById("logo-screen");
+  const logoImg = document.getElementById("logo-img");
+  const manualScreen = document.getElementById("manual-screen");
 
-    // 1. 1.5초 후 페이드 시작
+  logoImg.addEventListener("click", () => {
+    // 1) 로고 화면을 서서히 사라지게
+    logoScreen.classList.add("fade-out");
+
+    // 2) 애니메이션이 끝난 후 콘텐츠 표시 (1초 후)
     setTimeout(() => {
-      logo.classList.add("fade-out");
-
-      // 2. 페이드 1초 후 완전히 교체
-      setTimeout(() => {
-        logo.style.display = "none";
-        manual.style.display = "block";
-      }, 1000);
-
-    }, 1500);
+      logoScreen.style.display = "none";
+      manualScreen.style.display = "block";
+    }, 1000); // fade-out 과 동일한 시간
   });
 </script>
 
