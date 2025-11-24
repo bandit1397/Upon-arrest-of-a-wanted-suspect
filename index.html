@@ -433,19 +433,17 @@
   const manualScreen = document.getElementById('manual-screen');
 
   logoImg.addEventListener('click', () => {
-    // 1) 로고 확대 + 페이드아웃
     logoImg.classList.add('logo-zoom-out');
 
-    // 2초 후 로고 화면 숨기고 매뉴얼 화면 등장
     setTimeout(() => {
       logoScreen.style.display = 'none';
       manualScreen.style.display = 'block';
 
-      // 다음 프레임에서 매뉴얼 줌인 적용
-      setTimeout(() => {
+      // 브라우저 렌더링이 끝난 후 트랜지션 시작
+      requestAnimationFrame(() => {
         manualScreen.classList.add('manual-zoom-in');
-      }, 10);
-    }, 2000); // 로고 애니메이션 시간과 동일
+      });
+    }, 2000);
   });
 </script>
 
